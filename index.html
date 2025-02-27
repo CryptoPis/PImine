@@ -43,5 +43,13 @@
             }, 24 * 60 * 60 * 1000); // 24 საათი
         }
     </script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        window.Telegram.WebApp.ready();
+        const user = window.Telegram.WebApp.initDataUnsafe.user;
+        if (user) {
+            document.getElementById("result").innerText = `Hello, ${user.first_name}! Invest 1 Pi and get 2 Pi in 24 hours.`;
+        }
+    </script>
 </body>
 </html>
