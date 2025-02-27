@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PI Mine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PI Mine</h1>
+    <p>Invest 1 Pi and get 2 Pi in 24 hours!</p>
+    <button onclick="invest()">Invest 1 Pi</button>
+    <p id="result"></p>
+
+    <script>
+        function invest() {
+            const result = document.getElementById("result");
+            result.innerText = "Processing your investment... Please wait 24 hours.";
+            setTimeout(() => {
+                result.innerText = "Success! You received 2 Pi.";
+            }, 24 * 60 * 60 * 1000); // 24 საათი
+        }
+    </script>
+</body>
+</html>
